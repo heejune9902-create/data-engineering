@@ -1,0 +1,11 @@
+services:
+  spark:
+    image: ${SPARK_IMAGE:-quay.io/jupyter/pyspark-notebook:latest}
+    ports:
+      - "127.0.0.1:8888:8888"
+      - "127.0.0.1:4040:4040"
+    volumes:
+      - ./:/home/jovyan/work
+    working_dir: /home/jovyan/work
+    environment:
+      JUPYTER_TOKEN: ${JUPYTER_TOKEN:?Set JUPYTER_TOKEN in .env}

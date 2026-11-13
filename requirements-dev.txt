@@ -1,0 +1,5 @@
+-r cdc-reviews/requirements.txt
+numpy
+pandas
+pytest
+ruff

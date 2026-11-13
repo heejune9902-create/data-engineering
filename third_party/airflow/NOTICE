@@ -1,0 +1,6 @@
+Apache Airflow
+Copyright The Apache Software Foundation
+
+The Airflow Docker Compose configuration is adapted from the Apache Airflow
+local Docker Compose example. It is distributed under the Apache License 2.0.
+Source: https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html

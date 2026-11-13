@@ -1,0 +1,16 @@
+{
+  "name": "docker-service-example",
+  "version": "1.0.0",
+  "description": "Docker에서 실행하는 간단한 HTTP 서비스",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}

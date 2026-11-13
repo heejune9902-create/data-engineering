@@ -1,0 +1,24 @@
+{
+  "name": "reviews-cdc",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "plugin.name": "pgoutput",
+    "database.hostname": "postgres",
+    "database.port": "5432",
+    "database.user": "demo",
+    "database.password": "${POSTGRES_PASSWORD}",
+    "database.dbname": "shop",
+    "topic.prefix": "oy",
+    "table.include.list": "public.reviews,public.products,public.customers",
+    "slot.name": "reviews_slot",
+    "publication.autocreate.mode": "filtered",
+    "snapshot.mode": "initial",
+    "tombstones.on.delete": "false",
+    "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "key.converter.schemas.enable": "false",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter.schemas.enable": "false",
+    "topic.creation.default.partitions": "3",
+    "topic.creation.default.replication.factor": "1"
+  }
+}
